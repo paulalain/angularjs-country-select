@@ -51,7 +51,7 @@ angular.module('countrySelect', [])
           var assignCountry = $parse(attrs.ngModel).assign;
 
           elem.bind('change', function (e) {
-            assignCountry(elem.val());
+            assignCountry(scope, elem.val());
           });
 
           scope.$watch(attrs.ngModel, function (country) {
